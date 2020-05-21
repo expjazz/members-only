@@ -1,24 +1,71 @@
-# README
+# Micro reddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+    We made a baby version of the Reddit website where you can register, log in and post about whatever you want and your friends can comment on your posts.
 
-* Ruby version
+- Screenshot with logged in user
+  ![screenshot](./screenshot.png)
+- Screenshot with without logged in user
+  ![screenshot](./screenshot2.png)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby on Rails
+- Vs Code
+- Bootstrap
 
-* Database creation
+## Live Demo
 
-* Database initialization
+[Live Demo Link](https://frozen-citadel-00053.herokuapp.com/)
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+- Ruby on Rails
+
+### Usage
+
+- Clone the project to your local machine
+- Open your terminal and type in 'rails db:migrate'
+- Type 'rails server' on your terminal
+
+## Author
+
+- Okiror Frank
+- Expedito Andrade
+
+👤 **Okiror Frank**
+
+- Github: [@frankopkusianwar](https://github.com/frankopkusianwar)
+- Twitter: [@franko0781](https://twitter.com/franko0781)
+- Linkedin: [Okiror Frank](https://linkedin.com/in/frank-okiror-250076b5)
+- Email: okirorfrank3@gmail.com
+
+👤 **Expedito Andrade**
+
+- Github: [@githubexpjazz](https://github.com/expjazz)
+- Twitter: [@expjazz](https://twitter.com/expeditoandrade13)
+- Linkedin: [Expedito Andrade](https://www.linkedin.com/in/expedito-andrade-3645151a4/)
+- Email: expeditojazz@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse, standup team and the microverse community for helping build the skills that were used on this project
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.

@@ -7,10 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to 'Posts', '#', class: 'nav-link'%>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to 'Posts', root_path, class: 'nav-link'%>
       </li>
       <% if signed_in? %>
           <li class='nav-item'><%= link_to 'create post', new_post_path, class: 'nav-link' %></li>
@@ -29,9 +26,6 @@
               
       <% end %>
 
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
     </ul>
       <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-outline-success my-2 my-sm-0", method: :delete if signed_in? %>
       <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-success my-2 my-sm-0" if !signed_in? %>

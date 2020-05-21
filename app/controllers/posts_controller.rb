@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :user_signed_in?, only: %i[new create]
+  before_action :authenticate_user!, only: %i[new create]
   def new
     @post = Post.new
   end
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    @posts = Post.all
   end
 
   def show

@@ -1,6 +1,6 @@
 module ApplicationHelper
   def post_list(posts)
-    if posts.empty?
+    if posts.nil?
       []
     else
       posts

@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   def create
     @comment = Comment.new(comment_params)
-    byebug
-    @comment.user_id = current_user
-    @comment.post_id = params[:post_id]
+    @comment.user = current_user
+    @comment.post = Post.find(params[:post_id])
     if @comment.save
-      redirect_to post_path(params[:id])
+      redirect_to post_path(params[:post_id])
     else
       render :new
     end
