@@ -1,0 +1,12 @@
+<% post_list(@posts).each do |post|%>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%=post.title%></h5>
+    <p class="card-text"><%=post.body%></p>
+    <%= link_to 'view deatails', post_path(post), class: 'btn btn-primary' %>
+  </div>
+  <% if signed_in? %>
+    <small class="text-muted"><%= post.user.username %></small>
+  <% end %>
+</div>
+<% end %>

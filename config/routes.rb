@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/index'
+  get 'comments/create'
   root 'welcome#index'
   devise_for :users
   resources :users, only: [:show]
+  resources :posts do
+   resources :comments
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

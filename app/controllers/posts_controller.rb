@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
     if @post.save
       flash[:success] = 'Your post was created successfully'
       redirect_to root_path
@@ -15,6 +16,10 @@ class PostsController < ApplicationController
   end
 
   def index
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

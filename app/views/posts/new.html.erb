@@ -1,12 +1,15 @@
-<%= form_with model: @post, local: true do |f| %>
+<%= form_with model:@post, local: true do |f|%>
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control'%>
+    <%= f.text_field :title, autofocus: true, autocomplete: 'title', class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_field :body, class: 'form-control'%>
+    <%= f.text_area :body, autofocus: true, autocomplete: 'body', class: 'form-control' %>
   </div>
-  <%= f.submit 'Create Post', class: "btn btn-primary" %>
+
+  <div class="form-group">
+    <%= f.submit 'submit', class: 'btn btn-success' %>
+  </div>
 <% end %>
