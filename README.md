@@ -1,8 +1,8 @@
-# Micro reddit
+# Members Only
 
 ## Description
 
-    We made a baby version of the Reddit website where you can register, log in and post about whatever you want and your friends can comment on your posts.
+    We made a small forum where Logged in users can post about whatever they want , comment other posts. Not logged in can only read the posts, but not comment neither see the authors.
 
 - Screenshot with logged in user
   ![screenshot](./screenshot.png)
@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://frozen-citadel-00053.herokuapp.com/)
+[Live Demo Link](https://radiant-anchorage-05112.herokuapp.com/)
 
 ## Getting Started
 
