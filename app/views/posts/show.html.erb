@@ -9,13 +9,15 @@
   <% comment_list(@post.comments).each do |com| %>
     <p><%=com.body%></p>
   <% end %>
-  <%= form_with([model:@post, Comment.new], local: true, ) do |f|%>
-  <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_field :comment, autofocus: true, autocomplete: 'title', class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.submit 'comment', class: 'btn btn-success' %>
-  </div>
-<% end %>
+  <% if signed_in? %>
+    <%= form_with(model: [@post, Comment.new], local: true) do |f|%>
+    <div class="form-group">
+      <%= f.label :comment %>
+      <%= f.text_field :body, autofocus: true, autocomplete: 'title', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'comment', class: 'btn btn-success' %>
+    </div>
+    <% end %>
+  <% end %>
 </div>
