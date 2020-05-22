@@ -14,7 +14,7 @@ class PostsController < ApplicationController
       if @post.errors.full_messages
         flash[:alert] = ''
         @post.errors.full_messages.each do |err|
-          flash[:alert] += err + ' . ' 
+          flash[:alert] += err + ' . '
         end
       end
       render 'new'
