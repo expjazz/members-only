@@ -11,6 +11,12 @@ class PostsController < ApplicationController
       flash[:success] = 'Your post was created successfully'
       redirect_to root_path
     else
+      if @post.errors.full_messages
+        flash[:alert] = ''
+        @post.errors.full_messages.each do |err|
+          flash[:alert] += err + ' . ' 
+        end
+      end
       render 'new'
     end
   end
