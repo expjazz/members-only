@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @post.title %></h1>
+  <p class="lead">
+    <%= @post.user.username if signed_in? %>
+  </p>
+  <hr class="my-4">
+  <p><%= @post.body %></p>
+  <h4>Comments</h4>
+  <% comment_list(@post.comments).each do |com| %>
+    <p><%=com.body%></p>
+  <% end %>
+  <% if signed_in? %>
+    <%= form_with(model: [@post, Comment.new], local: true) do |f|%>
+    <div class="form-group">
+      <%= f.label :comment %>
+      <%= f.text_field :body, autofocus: true, autocomplete: 'title', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'comment', class: 'btn btn-success' %>
+    </div>
+    <% end %>
+  <% end %>
+</div>

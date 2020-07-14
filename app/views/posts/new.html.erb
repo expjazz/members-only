@@ -1,0 +1,24 @@
+<% if alert %>
+	<div class='alert alert-danger'>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+		<%= alert %>
+	</div>
+<% end %>
+
+<%= form_with model:@post, local: true do |f|%>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true, autocomplete: 'title', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, autofocus: true, autocomplete: 'body', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'submit', class: 'btn btn-success' %>
+  </div>
+<% end %>
